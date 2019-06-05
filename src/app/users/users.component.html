@@ -1,0 +1,17 @@
+<input placeholder="name" [(ngModel)]="serverName" type="text">
+<input type="text" placeholder="status" [(ngModel)]="serverStatus">
+<input type="text" placeholder="id" [(ngModel)]="serverId">
+<input type="text" placeholder="userid" [(ngModel)]="userId">
+<input type="text" placeholder="firstname" [(ngModel)]="firstName">
+<input type="text" placeholder="lastname" [(ngModel)]="lastName">
+<button (click)="addServer()">Add Server From User</button>
+
+
+<br><br><br>
+
+<form (ngSubmit)="changeMessage(messageForm)" #messageForm="ngForm">
+  <input name="messageText" ngModel type="text">
+  <button  type="submit">Send Message</button>
+</form>
+
+<p>{{getMessage()}}</p>

@@ -1,0 +1,18 @@
+<h2>List of Servers</h2>
+<input [(ngModel)]="temp" type="text">
+<input type="text" [(ngModel)]="tempid">
+<button (click)="onCreateServer()" >Add Server</button>
+<p *ngIf="isCreated">The server is created successfully</p>
+<!-- <p>{{servers[0].name}} is {{servers[0].status}}</p>
+<p>{{servers[1].name}} is {{servers[1].status}}</p> -->
+<!-- <p *ngFor="let server of servers;let i=index" >server with {{server.id}} and Name {{server.name}} is {{server.status}}</p> -->
+<app-server (insideEvent)="delete($event)"  [server]="server" *ngFor="let server of servers"></app-server>
+<br>    
+
+<!-- <button (click)="getMessage()">get Message</button> -->
+<br><br>
+<input [(ngModel)]="messageText" type="text">
+<button (click)="changeMessage()" >sendMessage</button><br>
+<p>{{getMessage()}}</p>
+
+
